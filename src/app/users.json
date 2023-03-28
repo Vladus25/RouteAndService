@@ -1,0 +1,19 @@
+{
+  "utenti": [
+    {
+      "id": 1,
+      "nome": "Mario",
+      "cognome": "Rossi"
+    },
+    {
+      "id": 2,
+      "nome": "Luca",
+      "cognome": "Verdi"
+    },
+    {
+      "id": 3,
+      "nome": "Anna",
+      "cognome": "Bianchi"
+    }
+  ]
+}

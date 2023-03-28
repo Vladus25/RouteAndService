@@ -1,0 +1,16 @@
+<div style="padding: 10px;">
+  <h2 class="text-center">Modifica utente</h2>
+
+  <form [formGroup]="form">
+    <div class="mb-3">
+      <label class="form-label">Nome</label>
+      <input class="form-control" formControlName="nome" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Cognome</label>
+      <input class="form-control" formControlName="cognome" />
+    </div>
+    <button class="btn btn-primary" style="margin-right: 3px;" (click)="onSave()">Salva</button>
+    <button class="btn btn-primary" (click)="onCancel()">Annulla</button>
+  </form>
+</div>
