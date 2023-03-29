@@ -34,8 +34,8 @@ export class RestService {
     return this.http.delete<void>(url);
   }
 
-  updateUser(user: User): Observable<void> {
+  updateUser(user: User){
     const url = `${this.urlUser}/${user.id}`;
-    return this.http.put<void>(url, user);
+    return this.http.put(url, user);
   }
 }

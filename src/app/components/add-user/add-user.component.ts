@@ -11,23 +11,23 @@ import { RestService } from 'src/app/services/rest.service';
   styleUrls: ['./add-user.component.css']
 })
 export class AddUserComponent {
-  user: User = { nome: '', cognome: '' };
+  // user: User = { nome: '', cognome: '' };
   // user: User[] = [];
 
-  constructor(
-    public dialogRef: MatDialogRef<AddUserComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    private restService: RestService
-  ) {}
+  // constructor(
+  //   public dialogRef: MatDialogRef<AddUserComponent>,
+  //   @Inject(MAT_DIALOG_DATA) public data: any,
+  //   private restService: RestService
+  // ) {}
 
-  ngOnInit(): void {
-  }
+  // ngOnInit(): void {
+  // }
 
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
+  // onNoClick(): void {
+  //   this.dialogRef.close();
+  // }
 
-  onAddClick(): void {
-    this.dialogRef.close(this.user);
-  }
+  // onAddClick(): void {
+  //   this.dialogRef.close(this.user);
+  // }
 }

@@ -22,37 +22,37 @@ export class TuttiUtentiComponent {
     this.rest.getUsers().subscribe((users) => (this.users = users));
   }
 
-  // addUser(){
-  //   this.rest.addUser(this.newUser).subscribe((user) => {
-  //     this.users.push(user);
-  //     this.newUser = new User();
-  //   });
-  // }
-
-  addUser(): void {
-    const dialogRef = this.dialog.open(AddUserComponent, {
-      width: '400px'
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        this.rest.addUser(result).subscribe(
-          () => {
-            this.ngOnInit();
-            this.snackBar.open('Utente aggiunto con successo', 'Chiudi', {
-              duration: 3000
-            });
-          },
-          error => {
-            console.log(error);
-            this.snackBar.open('Errore durante l\'aggiunta dell\'utente', 'Chiudi', {
-              duration: 3000
-            });
-          }
-        );
-      }
+  addUser(){
+    this.rest.addUser(this.newUser).subscribe((user) => {
+      this.users.push(user);
+      this.newUser = new User();
     });
   }
+
+  // addUser(): void {
+  //   const dialogRef = this.dialog.open(AddUserComponent, {
+  //     width: '400px'
+  //   });
+
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     if (result) {
+  //       this.rest.addUser(result).subscribe(
+  //         () => {
+  //           this.ngOnInit();
+  //           this.snackBar.open('Utente aggiunto con successo', 'Chiudi', {
+  //             duration: 3000
+  //           });
+  //         },
+  //         error => {
+  //           console.log(error);
+  //           this.snackBar.open('Errore durante l\'aggiunta dell\'utente', 'Chiudi', {
+  //             duration: 3000
+  //           });
+  //         }
+  //       );
+  //     }
+  //   });
+  // }
 
   onDelete(user: User){
     if (confirm(`Sei sicuro di voler eliminare ${user.nome} ${user.cognome}?`)) {
